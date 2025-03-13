@@ -19,7 +19,7 @@ $xamlInput = @'
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:installRetail"
         mc:Ignorable="d"
-        Title="Microsoft Installation Tool - www.msedu.vn" Height="515" Width="970" WindowStartupLocation="CenterScreen" Icon="">
+        Title="Microsoft Installation Tool - www.msedu.vn" Height="515" Width="970" WindowStartupLocation="CenterScreen" Icon="https://msedu.vn/wp-content/uploads/2025/03/microsoft-144.png">
     <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
         <GroupBox x:Name="groupBoxMicrosoftOffice" Header="Select version to install:" BorderBrush="#FF164A69" Margin="125,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="458" Width="821" FontFamily="Consolas" FontSize="11">
             <Canvas HorizontalAlignment="Left" VerticalAlignment="Top">
