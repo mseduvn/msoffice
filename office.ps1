@@ -20,7 +20,7 @@ $xamlInput = @'
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:install"
         mc:Ignorable="d"
-        Title="Microsoft Installation Tool - www.msedu.vn" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="https://raw.githubusercontent.com/mseduvn/powershell/refs/heads/main/Files/images.png" Width="1140" Height="522">
+        Title="Microsoft Installation Tool - www.msedu.vn" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="https://raw.githubusercontent.com/mseduvn/msoffice/refs/heads/main/Files/images.png" Width="1140" Height="522">
     <Grid Margin="0,0,0,-6">
         <GroupBox x:Name="groupBoxMicrosoftOffice" Header="Lua chon mot uong dung:" BorderBrush="#FF164A69" Margin="125,10,0,0" Height="444" Width="986" FontFamily="Roboto" FontSize="11" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Canvas HorizontalAlignment="Left" VerticalAlignment="Top">
@@ -173,11 +173,11 @@ $xamlInput = @'
     $Link1.Add_PreviewMouseDown({[system.Diagnostics.Process]::start('https://msedu.vn')})
 
 # Download links
-    $uri            = "https://github.com/mseduvn/powershell/raw/refs/heads/main/Files/setup.exe"
-    $uri2013        = "https://github.com/mseduvn/powershell/raw/refs/heads/main/Files/bin2013.exe"
-    $uri2016        = "https://github.com/mseduvn/powershell/raw/refs/heads/main/Files/setup16.exe"
-    $uninstall      = "https://github.com/mseduvn/powershell/raw/refs/heads/main/Files/setup.exe"
-    $removeAllXML   = 'https://raw.githubusercontent.com/mseduvn/powershell/refs/heads/main/Files/RemoveAll/configuration.xml'
+    $uri            = "https://github.com/mseduvn/msoffice/raw/refs/heads/main/Files/setup.exe"
+    $uri2013        = "https://github.com/mseduvn/msoffice/raw/refs/heads/main/Files/bin2013.exe"
+    $uri2016        = "https://github.com/mseduvn/msoffice/raw/refs/heads/main/Files/setup16.exe"
+    $uninstall      = "https://github.com/mseduvn/msoffice/raw/refs/heads/main/Files/setup.exe"
+    $removeAllXML   = 'https://raw.githubusercontent.com/mseduvn/msoffice/refs/heads/main/Files/RemoveAll/configuration.xml'
 
 # Prepiaration for download and install
     function PreparingOffice {
