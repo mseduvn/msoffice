@@ -6,7 +6,7 @@ Cài đặt Microsoft Office đơn giản với PowerShell trên Windows 10 tr�
 
 ## Cách sử dụng
 
-1. Click chuột phải vào biểu tượng Windows và chọn Terminal (Admin).
+1. Click chuột phải vào biểu tượng Windows và chọn Terminal (Admin). <br> <br>
 2. Nhập câu lệnh bên dưới sau đó nhấn Enter. <br> <br>
 
 ```ps1
