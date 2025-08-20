@@ -15,7 +15,7 @@ Cài đặt Microsoft Office đơn giản với PowerShell trên Windows 10 tr�
 3. Một cửa sổ PowerShell mới được mở ra. Hãy chọn phiên bản Office, ngôn ngữ sau đó nhấn Submit để tiến hành cài đặt. <br> <br>
 ![App Screenshot](https://raw.githubusercontent.com/mseduvn/msoffice/refs/heads/main/Files/msedu_installoffice.png
 )
-4. Quá trình cài đặt diễn ra tự động. Thông thường sẽ cần khoảng vài phút, phụ thuộc vào tốc độ internet.
+4. Quá trình cài đặt diễn ra tự động. Thông thường sẽ cần khoảng vài phút, phụ thuộc vào tốc độ internet. <br> <br>
 
 ![App Screenshot](https://raw.githubusercontent.com/mseduvn/msoffice/refs/heads/main/Files/msedu_installoffice1.png
 )
