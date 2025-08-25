@@ -205,7 +205,7 @@ $xamlInput = @'
 
         $batchFile = "Install-$($arch)bit.bat"
         New-Item $batchFile -ItemType File -Force
-        Add-content $batchFile -Value "%~dp0Configuration\ClickToRun.exe /configure %~dp0Configuration\$configurationFile"
+        Add-content $batchFile -Value "`"%~dp0Configuration\ClickToRun.exe`" /configure `"%~dp0Configuration\$configurationFile`""
 
         (New-Object Net.WebClient).DownloadFile($uri, "$workingDir\Configuration\ClickToRun.exe")
 
