@@ -175,22 +175,24 @@ $xamlInput = @'
         Set-Location $workingDir
         Invoke-Item $workingDir
 
-        New-Item $workingDir\Configuration -ItemType Directory -Force
+        # New-Item $workingDir\Configuration -ItemType Directory -Force
         $configurationFile = "configuration-x$arch.xml"
-        New-Item .\Configuration\$configurationFile -ItemType File -Force
-        Add-Content .\Configuration\$configurationFile -Value "<Configuration>"
-        Add-content .\Configuration\$configurationFile -Value "<Add OfficeClientEdition=`"$arch`">"
-        Add-content .\Configuration\$configurationFile -Value "<Product ID=`"$productId`">"
-        Add-content .\Configuration\$configurationFile -Value "<Language ID=`"$languageId`"/>"
-        Add-Content .\Configuration\$configurationFile -Value "</Product>"
-        Add-Content .\Configuration\$configurationFile -Value "</Add>"
-        Add-Content .\Configuration\$configurationFile -Value "</Configuration>"
+        New-Item $configurationFile -ItemType File -Force
+        Add-Content $configurationFile -Value "<Configuration>"
+        Add-content $configurationFile -Value "<Add OfficeClientEdition=`"$arch`">"
+        Add-content $configurationFile -Value "<Product ID=`"$productId`">"
+        Add-content $configurationFile -Value "<Language ID=`"$languageId`"/>"
+        Add-Content $configurationFile -Value "</Product>"
+        Add-Content $configurationFile -Value "</Add>"
+        Add-Content $configurationFile -Value "</Configuration>"
 
         $batchFile = "Install-$($arch)bit.bat"
         New-Item $batchFile -ItemType File -Force
-        Add-content $batchFile -Value "`"%~dp0Configuration\ClickToRun.exe`" /configure `"%~dp0Configuration\$configurationFile`""
+        Add-content $batchFile -Value "@echo off"
+        Add-content $batchFile -Value "cd /d %~dp0"
+        Add-content $batchFile -Value "bin.exe /configure $configurationFile"
 
-        (New-Object Net.WebClient).DownloadFile($uri, "$workingDir\Configuration\ClickToRun.exe")
+        (New-Object Net.WebClient).DownloadFile($uri, "$workingDir\bin.exe")
 
         $sync.configurationFile = $configurationFile
         $sync.workingDir = $workingDir
@@ -208,7 +210,7 @@ $xamlInput = @'
 
         Set-Location -Path $($sync.workingDir)
 
-        Start-Process -FilePath .\Configuration\ClickToRun.exe -ArgumentList "/download .\Configuration\$($sync.configurationFile)" -NoNewWindow -Wait
+        Start-Process -FilePath .\bin.exe -ArgumentList "/download .\$($sync.configurationFile)" -NoNewWindow -Wait
                 
         # Bring back our Button, set the Label and ProgressBar, we're done..
             $sync.Form.Dispatcher.Invoke([action] { $sync.image.Visibility = "Hidden" })
